@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--order-->
+    <dimen name="margin">16dp</dimen>
+    <dimen name="card_height">166dp</dimen>
+    <dimen name="heading">24sp</dimen>
+    <dimen name="sub_heading">16sp</dimen>
+    <dimen name="button_text">14sp</dimen>
+    <dimen name="btn_height">48dp</dimen>
+    <dimen name="btn_width">110dp</dimen>
+    <dimen name="actionBarHeight">58dp</dimen>
+
+<!--    delivery-->
+    <dimen name="logo_top_margin">60dp</dimen>
+    <dimen name="tv_bgn">30dp</dimen>
+    <dimen name="tv_bgn_txtSize">24sp</dimen>
+    <dimen name="btn_start_mgTop">80dp</dimen>
+    <dimen name="btn_start_txtSize">20sp</dimen>
+    <dimen name="btn_login_mgTop">20dp</dimen>
+    <dimen name="btn_adminlogin">90dp</dimen>
+    <dimen name="tv_header">30dp</dimen>
+    <dimen name="btn_daashboard_mgnTop">10dp</dimen>
+    <dimen name="Menu_Icon_mgnTop">9dp</dimen>
+    <dimen name="Menu_Icon_mgnEnd">15dp</dimen>
+    <dimen name="Back_Icon_Mgn" >10dp</dimen>
+    <dimen name="scroll_view_mgnTop">10dp</dimen>
+    <dimen name="update_mgnTop">10dp</dimen>
+    <dimen name="update_mgnBottom">20dp</dimen>
+    <dimen name="delete_mgnBottom">5dp</dimen>
+    <dimen name="Card_tv_mgnLeft">10dp</dimen>
+    <dimen name="Card_tv_mgnTop">13dp</dimen>
+
+    <!--    user-->
+    <dimen name="heading1">32sp</dimen>
+    <dimen name="sub_heading1">22dp</dimen>
+    <dimen name="para">16sp</dimen>
+    <dimen name="btn_txt">20sp</dimen>
+    <dimen name="btn_height1">60dp</dimen>
+    <dimen name="btn_width1">355dp</dimen>
+    <dimen name="homebtn_height">150dp</dimen>
+    <dimen name="homebtn_width">150dp</dimen>
+    <dimen name="card_txt">24dp</dimen>
+    <dimen name="card_heading">26sp</dimen>
+    <dimen name="card_height1">190dp</dimen>
+    <dimen name="card_width">390dp</dimen>
+
+    <!--inventory-->
+    <dimen name="marginTopSearch">80dp</dimen>
+    <dimen name="ButtonUpdate">164dp</dimen>
+    <dimen name="marginTopButton">164dp</dimen>
+    <dimen name="itemMarginTop">232dp</dimen>
+    <dimen name="quantityMarginTop">224dp</dimen>
+    <dimen name="logoMarginTop">16dp</dimen>
+    <dimen name="addValueMarginTop">52dp</dimen>
+    <dimen name="deleteMarginTop">48dp</dimen>
+</resources>

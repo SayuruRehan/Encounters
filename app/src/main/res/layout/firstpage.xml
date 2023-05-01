@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstpageActivity">
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/btn_login_mgTop"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowRadius="20"
+        android:text="@string/btn_login"
+        android:textColor="#F9F9F9"
+        android:textSize="@dimen/tv_bgn_txtSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="349dp"
+        android:layout_height="257dp"
+        android:layout_marginTop="@dimen/logo_top_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/whatsapp_image_2023_03_14_at_08_49_00" />
+
+    <TextView
+        android:id="@+id/tv_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/tv_acc"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/tv_bgn_txtSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <Button
+        android:id="@+id/btn_adminlg"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/btn_adminlogin"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowRadius="50"
+        android:text="@string/btn_adminlg"
+        android:textColor="#023282"
+        android:textSize="@dimen/btn_start_txtSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_acc" />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/tv_signup"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/tv_bgn_txtSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_acc"
+        app:layout_constraintTop_toTopOf="@+id/tv_acc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

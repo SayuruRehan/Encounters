@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MAD_Encounters"
+        tools:targetApi="31">
+        <activity
+            android:name=".ordermangement.ApproveForm"
+            android:exported="false" />
+        <activity
+            android:name=".ordermangement.RejectForm"
+            android:exported="false" />
+        <activity
+            android:name=".ViewInventory"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateInventory"
+            android:exported="false" />
+        <activity
+            android:name=".InventoryMain"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteInventory"
+            android:exported="false" />
+        <activity
+            android:name=".AddInventory"
+            android:exported="false" />
+        <activity
+            android:name=".ViewOrder"
+            android:exported="false" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateOrder"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteOrder"
+            android:exported="false" />
+        <activity
+            android:name=".AddOrder"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteDeliveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateDeliveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddDeliveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllDeliveryOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstpageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BeginingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ordermangement.OrderManagementMain"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ordermangement.ApprovedOrders"
+            android:exported="false" />
+        <activity
+            android:name=".ordermangement.RejectedOrders"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>
