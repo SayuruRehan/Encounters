@@ -15,7 +15,6 @@ class ApproveForm : AppCompatActivity() {
 
     private lateinit var etOrderID : EditText
     private lateinit var etOrderName : EditText
-    private lateinit var etReason : EditText
     private lateinit var dbRef : DatabaseReference
     private lateinit var btnSubmit : Button
 
@@ -27,7 +26,7 @@ class ApproveForm : AppCompatActivity() {
         etOrderName = findViewById(R.id.editTextOrderName)
         btnSubmit = findViewById(R.id.buttonSubmit)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("AcceptedOrders")
+        dbRef = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
         btnSubmit.setOnClickListener{
             saveAcceptedOrder()
         }
@@ -40,7 +39,6 @@ class ApproveForm : AppCompatActivity() {
     private fun saveAcceptedOrder() {
         val orderID = etOrderID.text.toString().trim()
         val orderName = etOrderName.text.toString().trim()
-        val reason = etReason.text.toString().trim()
 
         if (orderID.isEmpty()) {
             etOrderID.error = "Please enter an order ID"
@@ -51,12 +49,11 @@ class ApproveForm : AppCompatActivity() {
             return
         }
 
-        val rejectedOrder = OrderStatus(orderID, orderName, reason, "Accepted")
+        val rejectedOrder = OrderStatus(orderID, orderName, null, "Accepted")
         dbRef.child(orderID).setValue(rejectedOrder).addOnCompleteListener {
             Toast.makeText(this, "Order Accepted", Toast.LENGTH_SHORT).show()
             etOrderID.setText("")
             etOrderName.setText("")
-            etReason.setText("")
         }.addOnFailureListener{ err ->
             Toast.makeText(this, "Error: ${err.message}", Toast.LENGTH_SHORT).show()
         }

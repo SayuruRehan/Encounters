@@ -3,8 +3,8 @@
     <string name="title">Order Management</string>
     <string name="approved_heading">Approved Orders</string>
     <string name="rejected_heading">Rejected Orders</string>
-    <string name="approved_count">145</string>
-    <string name="rejected_count">23</string>
+    <string name="approved_count">Loading..</string>
+    <string name="rejected_count">Loading..</string>
     <string name="order_id">ID</string>
     <string name="order_title">Title</string>
     <string name="ship_country">Country</string>
