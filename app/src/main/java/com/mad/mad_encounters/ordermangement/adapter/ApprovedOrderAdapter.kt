@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mad.mad_encounters.R
+import com.mad.mad_encounters.ordermangement.ApprovedOrders
+import com.mad.mad_encounters.ordermangement.RejectedOrders
 import com.mad.mad_encounters.ordermangement.model.OrderStatus
 
 class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : RecyclerView.Adapter<ApprovedOrderAdapter.ApprovedOrderViewHolder>() {
@@ -28,5 +30,16 @@ class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : 
     class ApprovedOrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvOrderID = itemView.findViewById<TextView>(R.id.orderID)
         val tvOrderName = itemView.findViewById<TextView>(R.id.orderTitle)
+        val btnDelete = itemView.findViewById<TextView>(R.id.deleteBtnapp)
+
+        init {
+            btnDelete.setOnClickListener {
+                val adapterPosition = adapterPosition
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    // Call the delete function on the adapter with the current position
+                    (itemView.context as ApprovedOrders).deleteOrder(adapterPosition)
+                }
+            }
+        }
     }
 }
