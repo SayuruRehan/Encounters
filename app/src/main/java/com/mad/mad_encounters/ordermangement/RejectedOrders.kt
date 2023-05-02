@@ -69,4 +69,13 @@ class RejectedOrders : AppCompatActivity() {
         dbRef.child(order.orderID).removeValue()
         Toast.makeText(this, "Order Deleted", Toast.LENGTH_SHORT).show()
     }
+    fun approveOrder(position: Int){
+        val order = rejectedList[position]
+        order.status = "Approved"
+        val dbRef = FirebaseDatabase.getInstance().getReference("RejectedOrders")
+        dbRef.child(order.orderID).removeValue()
+        val dbRef2 = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
+        dbRef2.child(order.orderID).setValue(order)
+        Toast.makeText(this, "Order Approved", Toast.LENGTH_SHORT).show()
+    }
 }

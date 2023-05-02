@@ -3,6 +3,7 @@ package com.mad.mad_encounters.ordermangement.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mad.mad_encounters.R
@@ -21,6 +22,7 @@ class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : 
         val currentOrder = approvedList[position]
         holder.tvOrderID.text = currentOrder.orderID
         holder.tvOrderName.text = currentOrder.orderName
+        holder.tvStatus.text = currentOrder.status
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +32,9 @@ class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : 
     class ApprovedOrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvOrderID = itemView.findViewById<TextView>(R.id.orderID)
         val tvOrderName = itemView.findViewById<TextView>(R.id.orderTitle)
-        val btnDelete = itemView.findViewById<TextView>(R.id.deleteBtnapp)
+        val tvStatus = itemView.findViewById<TextView>(R.id.orderStatus)
+        val btnDelete = itemView.findViewById<Button>(R.id.deleteBtnapp)
+        val btnReject = itemView.findViewById<Button>(R.id.rejectBtnapp)
 
         init {
             btnDelete.setOnClickListener {
@@ -38,6 +42,13 @@ class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : 
                 if (adapterPosition != RecyclerView.NO_POSITION) {
                     // Call the delete function on the adapter with the current position
                     (itemView.context as ApprovedOrders).deleteOrder(adapterPosition)
+                }
+            }
+            btnReject.setOnClickListener{
+                val adapterPosition = adapterPosition
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    // Call the delete function on the adapter with the current position
+                    (itemView.context as ApprovedOrders).rejectOrder(adapterPosition)
                 }
             }
         }
