@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddDeliveryActivity">
+    tools:context=".deliverymangement.activity.AddDeliveryActivity">
 
     <Button
         android:id="@+id/btn_add"
@@ -52,7 +52,8 @@
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_header"
-        app:srcCompat="@drawable/baseline_arrow_back_24" />
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        android:onClick="navigateback" />
 
     <ImageView
         android:id="@+id/icon_menu"
