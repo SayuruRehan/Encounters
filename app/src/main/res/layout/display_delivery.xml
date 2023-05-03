@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deliverymangement.activity.UpdateDeliveryActivity">
+
+    <Button
+        android:id="@+id/btn_update1"
+        android:layout_width="273dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowRadius="50"
+        android:text="@string/btn_update"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_display_delivery_date" />
+
+
+    <Button
+        android:id="@+id/btn_delete1"
+        android:layout_width="273dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowRadius="50"
+        android:text="@string/btn_delete"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update1" />
+
+    <EditText
+        android:id="@+id/tv_display_product_name"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:background="@drawable/orderbox"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/tv_product_name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <EditText
+        android:id="@+id/tv_display_address"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:background="@drawable/orderbox"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/tv_address"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <EditText
+        android:id="@+id/tv_display_delivery_date"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:background="@drawable/orderbox"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/tv_delivery_date"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <EditText
+        android:id="@+id/tv_display_delivery_Id"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:background="@drawable/orderbox"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete1" />
+
+    <TextView
+        android:id="@+id/tv_update_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_header"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/tv_delivery_details"
+        android:textColor="@color/dark_blue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="415dp"
+        android:layout_height="58dp"
+        android:background="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="62dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        android:onClick="navigateback" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16"
+        app:srcCompat="@drawable/baseline_menu_24" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_product_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_update_delivery" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_address"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_display_product_name" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_delivery_date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_display_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

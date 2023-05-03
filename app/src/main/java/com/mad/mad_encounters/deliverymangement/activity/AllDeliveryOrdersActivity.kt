@@ -4,18 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.mad.mad_encounters.R
 import com.mad.mad_encounters.deliverymangement.adapter.DeliveryAdapter
 import com.mad.mad_encounters.deliverymangement.model.DeliveryModel
-import kotlin.jvm.internal.Ref
 
 class AllDeliveryOrdersActivity : AppCompatActivity() {
 
@@ -42,58 +37,7 @@ class AllDeliveryOrdersActivity : AppCompatActivity() {
 
         getDeliveryData()
 
-//        btnUpdate.setOnClickListener{
-//            openUpdateDialog(
-//                intent.getStringExtra("delivertID").toString(),
-//                intent.getStringExtra("proName").toString(),
-////                intent.getStringExtra("address").toString()
-//            )
-//        }
     }
-
-//    private fun openUpdateDialog(delivertID: String,proName: String){
-//        val dDialog = AlertDialog.Builder(this)
-//        val inflater = layoutInflater
-//        val dDialogView = inflater.inflate(R.layout.update_delivery,null)
-//
-//        dDialog.setView(dDialogView)
-//
-//        val proName = dDialogView.findViewById<EditText>(R.id.tv_update_product_name)
-//        val address = dDialogView.findViewById<EditText>(R.id.tv_update_address)
-//        val date = dDialogView.findViewById<EditText>(R.id.tv_update_delivery_date)
-//        val btnUpdateData = dDialogView.findViewById<Button>(R.id.btn_update)
-//
-//        proName.setText(intent.getStringExtra("proName").toString())
-//        address.setText(intent.getStringExtra("address").toString())
-//        date.setText(intent.getStringExtra("date").toString())
-//
-//        dDialog.setTitle("Updating $proName Record")
-//
-//        val alertDialog = dDialog.create()
-//        alertDialog.show()
-//
-//        btnUpdateData.setOnClickListener{
-//            updateDeliveryData(
-//                delivertID,
-//                proName.text.toString(),
-//                address.text.toString(),
-//                date.text.toString()
-//            )
-//            Toast.makeText(applicationContext, "Delivery data Updated", Toast.LENGTH_LONG).show()
-//
-//            tvDeliveryname.text = proName.text.toString()
-//            tvDeliveryAddress.text = proName.text.toString()
-//            tvDeliveryDate.text = proName.text.toString()
-//
-//            alertDialog.dismiss()
-//        }
-//    }
-
-//    private fun updateDeliveryData(id:String, name:String, address:String, date:String){
-//        val dbRef = FirebaseDatabase.getInstance().getReference("Deliveries")
-//        val deliveryInfo = DeliveryModel(id, name, address, date)
-//        dbRef.setValue((deliveryInfo))
-//    }
 
     private fun getDeliveryData() {
         deliveryRecyclerView.visibility = View.GONE
@@ -114,6 +58,13 @@ class AllDeliveryOrdersActivity : AppCompatActivity() {
                     
                     dAdapter.setOnItemClickListener(object : DeliveryAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
+                            val intent = Intent(this@AllDeliveryOrdersActivity, DisplayDeliveryActivity::class.java)
+
+                            intent.putExtra("delivertID", deliveryList[position].delivertID)
+                            intent.putExtra("proName", deliveryList[position].ProName)
+                            intent.putExtra("address", deliveryList[position].Address)
+                            intent.putExtra("date", deliveryList[position].Date)
+                            startActivity(intent)
                         }
 
                     })

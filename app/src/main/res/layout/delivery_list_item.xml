@@ -6,7 +6,7 @@
     android:layout_height="@dimen/card_height"
     android:layout_margin="@dimen/margin"
     android:backgroundTint="@color/light_blue"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="4dp">
 
 
@@ -17,7 +17,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="280dp"
             android:layout_height="165dp"
             android:orientation="vertical">
 
@@ -25,7 +25,7 @@
                 android:id="@+id/tvDeliveryDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="13dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/light_blue"
@@ -37,7 +37,7 @@
                 android:id="@+id/tvDeliveryAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="13dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-condensed"
@@ -48,7 +48,7 @@
                 android:id="@+id/tvDeliveryName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="13dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-condensed"
@@ -65,18 +65,11 @@
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
-                app:srcCompat="@drawable/baseline_edit_24"
-                android:onClick="navigateupdate" />
+                app:srcCompat="@drawable/baseline_dashboard_24" />
 
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="5dp"
-                app:srcCompat="@drawable/baseline_delete_24"
-                android:onClick="navigatedelete" />
         </LinearLayout>
 
     </LinearLayout>
