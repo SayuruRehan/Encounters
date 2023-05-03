@@ -23,7 +23,7 @@
         android:layout_marginTop="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actionBar"
         app:layout_constraintVertical_bias="0.0">
@@ -31,28 +31,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/margin">
+
             <EditText
                 android:id="@+id/editTextOrderID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Order ID"
-                android:inputType="text"/>
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/editTextOrderName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Order Name"
-                android:inputType="text"/>
+                android:inputType="text" />
 
+            <EditText
+                android:id="@+id/editTextCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Order Country"
+                android:inputType="text" />
+            <Spinner
+                android:id="@+id/editTextMode"
+                android:entries="@array/mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/buttonSubmit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Approve Order"/>
+                android:text="Approve Order" />
+
         </LinearLayout>
     </ScrollView>
 

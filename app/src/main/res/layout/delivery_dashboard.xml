@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeliveryDashboardActivity">
+    tools:context=".deliverymangement.activity.DeliveryDashboardActivity">
 
     <TextView
         android:id="@+id/textView5"
@@ -64,7 +64,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_approved" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_approved"
+        android:onClick="navigateToAdd"/>
 
     <Button
         android:id="@+id/btn_all_delivery"
@@ -78,6 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_delivery" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_delivery"
+        android:onClick="navigateToAll"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

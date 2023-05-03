@@ -47,16 +47,16 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/sub_heading" />
 
-            <!--                <TextView-->
-            <!--                    android:id="@+id/shipCountry"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_marginStart="8dp"-->
-            <!--                    android:layout_marginBottom="4dp"-->
-            <!--                    android:fontFamily="sans-serif-condensed"-->
-            <!--                    android:text="@string/ship_country"-->
-            <!--                    android:textColor="@color/white"-->
-            <!--                    android:textSize="@dimen/sub_heading" />-->
+            <TextView
+                android:id="@+id/orderReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Reason"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading" />
 
             <!--                <TextView-->
             <!--                    android:id="@+id/shipmethod"-->

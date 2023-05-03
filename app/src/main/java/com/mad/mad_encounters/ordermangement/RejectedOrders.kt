@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.mad.mad_encounters.R
 import com.mad.mad_encounters.ordermangement.adapter.ApprovedOrderAdapter
+import com.mad.mad_encounters.ordermangement.adapter.RejectedOrderAdapter
 import com.mad.mad_encounters.ordermangement.model.OrderStatus
 
 class RejectedOrders : AppCompatActivity() {
@@ -49,7 +50,7 @@ class RejectedOrders : AppCompatActivity() {
                         val orderStatus = order.getValue(OrderStatus::class.java)
                         rejectedList.add(orderStatus!!)
                     }
-                    rejRecyclerView.adapter = ApprovedOrderAdapter(rejectedList)
+                    rejRecyclerView.adapter = RejectedOrderAdapter(rejectedList)
                     rejRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
@@ -61,5 +62,20 @@ class RejectedOrders : AppCompatActivity() {
         }
         )
 
+    }
+    fun deleteOrder(position: Int){
+        val order = rejectedList[position]
+        val dbRef = FirebaseDatabase.getInstance().getReference("RejectedOrders")
+        dbRef.child(order.orderID).removeValue()
+        Toast.makeText(this, "Order Deleted", Toast.LENGTH_SHORT).show()
+    }
+    fun approveOrder(position: Int){
+        val order = rejectedList[position]
+        order.status = "Approved"
+        val dbRef = FirebaseDatabase.getInstance().getReference("RejectedOrders")
+        dbRef.child(order.orderID).removeValue()
+        val dbRef2 = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
+        dbRef2.child(order.orderID).setValue(order)
+        Toast.makeText(this, "Order Approved", Toast.LENGTH_SHORT).show()
     }
 }

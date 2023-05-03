@@ -63,4 +63,20 @@ class ApprovedOrders : AppCompatActivity() {
         )
 
     }
+
+    fun deleteOrder(position: Int){
+        val order = approvedList[position]
+        val dbRef = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
+        dbRef.child(order.orderID).removeValue()
+        Toast.makeText(this, "Order Deleted", Toast.LENGTH_SHORT).show()
+    }
+    fun rejectOrder(position: Int){
+        val order = approvedList[position]
+        order.status = "Rejected"
+        val dbRefApp = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
+        dbRef.child(order.orderID).removeValue()
+        val dbRefRej =  FirebaseDatabase.getInstance().getReference("RejectedOrders")
+        dbRefRej.child(order.orderID).setValue(order)
+        Toast.makeText(this, "Order Rejected", Toast.LENGTH_SHORT).show()
+    }
 }
