@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MAD_Encounters"
         tools:targetApi="31">
         <activity
+            android:name=".DeliveryListItemActivity"
+            android:exported="false" />
+        <activity
             android:name=".ordermangement.ApproveForm"
             android:exported="false" />
         <activity
@@ -60,20 +63,26 @@
             android:name=".AddOrder"
             android:exported="false" />
         <activity
-            android:name=".DeleteDeliveryActivity"
+            android:name=".deliverymangement.activity.DeleteDeliveryActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdateDeliveryActivity"
+            android:name=".deliverymangement.activity.UpdateDeliveryActivity"
             android:exported="false" />
         <activity
-            android:name=".AddDeliveryActivity"
+            android:name=".deliverymangement.activity.AddDeliveryActivity"
             android:exported="false" />
         <activity
-            android:name=".AllDeliveryOrdersActivity"
+            android:name=".deliverymangement.activity.AllDeliveryOrdersActivity"
             android:exported="false" />
         <activity
-            android:name=".DeliveryDashboardActivity"
-            android:exported="false" />
+            android:name=".deliverymangement.activity.DeliveryDashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".FirstpageActivity"
             android:exported="false" />
@@ -82,12 +91,14 @@
             android:exported="false" />
         <activity
             android:name=".ordermangement.OrderManagementMain"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".ordermangement.ApprovedOrders"
@@ -98,11 +109,13 @@
         <activity
             android:name=".MainActivity"
             android:exported="false">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 
