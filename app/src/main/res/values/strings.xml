@@ -15,7 +15,11 @@
     <string name="approved_orders">Approved Orders</string>
     <string name="delete_btn">DELETE</string>
     <string name="rejected_orders">Rejected Orders</string>
-
+    <string-array name="mode">
+        <item></item>
+        <item>Air</item>
+        <item>Ship</item>
+    </string-array>
     <!--    delivery-->
     <!--    <string name="app_name">MadMiniProject</string>-->
     <string name="tv_bgn">Join with us better Online shopping</string>
