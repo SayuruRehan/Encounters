@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MAD_Encounters"
         tools:targetApi="31">
         <activity
+            android:name=".deliverymangement.activity.DisplayDeliveryActivity"
+            android:exported="false" />
+        <activity
             android:name=".DeliveryListItemActivity"
             android:exported="false" />
         <activity

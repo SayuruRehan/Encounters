@@ -41,6 +41,7 @@
     <string name="btn_update">update</string>
     <string name="tv_delete_delivery">Delete Delivery</string>
     <string name="btn_delete">delete</string>
+    <string name="tv_delivery_details">Delivery Details</string>
 
     <!--    user-->
     <string name="tv_begin">Share your products with the world!</string>
