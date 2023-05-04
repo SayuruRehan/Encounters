@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Encounters"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".ApprovedDeliveryItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deliverymangement.activity.ApprovedDeliveryDisplayActivity"
+            android:exported="false" />
         <activity
             android:name=".deliverymangement.activity.DisplayDeliveryActivity"
             android:exported="false" />
@@ -79,7 +85,7 @@
             android:exported="false" />
         <activity
             android:name=".deliverymangement.activity.DeliveryDashboardActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,7 +100,7 @@
             android:exported="false" />
         <activity
             android:name=".ordermangement.OrderManagementMain"
-            android:exported="false">
+            android:exported="false" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -111,7 +117,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
+            android:exported="false" >
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
