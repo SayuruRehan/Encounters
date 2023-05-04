@@ -41,7 +41,7 @@ class RejectForm : AppCompatActivity() {
     private fun saveRejectedOrder() {
         val orderID = etOrderID.text.toString().trim()
         val orderName = etOrderName.text.toString().trim()
-        val reason = etReason.text.toString().trim()
+        val orderReason = etReason.text.toString().trim()
 
         if (orderID.isEmpty()) {
             etOrderID.error = "Please enter an order ID"
@@ -51,12 +51,12 @@ class RejectForm : AppCompatActivity() {
             etOrderName.error = "Please enter an order name"
             return
         }
-        if (reason.isEmpty()) {
+        if (orderReason.isEmpty()) {
             etReason.error = "Please enter a reason"
             return
         }
-
-        val rejectedOrder = OrderStatus(orderID, orderName, reason, "Rejected")
+        //insert data into database
+        val rejectedOrder = OrderStatus(orderID, orderName, null, null, orderReason, "Rejected")
         dbRef.child(orderID).setValue(rejectedOrder).addOnCompleteListener {
             Toast.makeText(this, "Order Rejected", Toast.LENGTH_SHORT).show()
             etOrderID.setText("")

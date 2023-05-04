@@ -22,7 +22,8 @@ class RejectedOrderAdapter (private val rejectedList: ArrayList<OrderStatus>) : 
         val currentOrder = rejectedList[position]
         holder.tvOrderID.text = currentOrder.orderID
         holder.tvOrderName.text = currentOrder.orderName
-        holder.tvStatus.text = currentOrder.status
+        holder.tvOrderReason.text = currentOrder.orderReason
+//        holder.tvStatus.text = currentOrder.status
     }
 
     override fun getItemCount(): Int {
@@ -32,7 +33,8 @@ class RejectedOrderAdapter (private val rejectedList: ArrayList<OrderStatus>) : 
     class RejectedOrderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvOrderID = itemView.findViewById<TextView>(R.id.orderID)
         val tvOrderName = itemView.findViewById<TextView>(R.id.orderTitle)
-        val tvStatus = itemView.findViewById<TextView>(R.id.orderStatus)
+        val tvOrderReason = itemView.findViewById<TextView>(R.id.orderReason)
+//        val tvStatus = itemView.findViewById<TextView>(R.id.orderStatus)
         val btnDelete = itemView.findViewById<Button>(R.id.deleteBtnRej)
         val btnApprove = itemView.findViewById<Button>(R.id.approveBtnrej)
         init {
