@@ -19,10 +19,6 @@ class AllDeliveryOrdersActivity : AppCompatActivity() {
     private lateinit var deliveryList: ArrayList<DeliveryModel>
     private lateinit var dbRef: DatabaseReference
 
-//    private lateinit var tvDeliveryname: TextView
-//    private lateinit var tvDeliveryAddress: TextView
-//    private lateinit var tvDeliveryDate: TextView
-//    private lateinit var btnUpdate: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

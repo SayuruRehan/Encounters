@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_height"
+    android:layout_margin="@dimen/margin"
+    android:backgroundTint="@color/light_blue"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/orderID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/order_id"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading" />
+
+            <TextView
+                android:id="@+id/orderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/order_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading" />
+
+            <TextView
+                android:id="@+id/orderCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Country"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading" />
+
+            <TextView
+                android:id="@+id/orderMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Mode"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sub_heading" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/baseline_dashboard_24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

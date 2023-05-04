@@ -21,4 +21,9 @@ class DeliveryDashboardActivity : AppCompatActivity() {
         val intent = Intent(this, AllDeliveryOrdersActivity::class.java)
         startActivity(intent)
     }
+
+    fun navigateToApproved(view: View) {
+        val intent = Intent(this, ApprovedDeliveryDisplayActivity::class.java)
+        startActivity(intent)
+    }
 }
