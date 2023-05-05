@@ -5,10 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.mad.mad_encounters.R
-import com.mad.mad_encounters.ordermangement.RejectedOrders
+import com.mad.mad_encounters.ordermangement.activities.RejectedOrders
 import com.mad.mad_encounters.ordermangement.model.OrderStatus
 
 class RejectedOrderAdapter (private val rejectedList: ArrayList<OrderStatus>) : RecyclerView.Adapter<RejectedOrderAdapter.RejectedOrderViewHolder>() {

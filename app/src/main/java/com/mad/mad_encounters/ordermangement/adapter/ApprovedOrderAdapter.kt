@@ -7,8 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mad.mad_encounters.R
-import com.mad.mad_encounters.ordermangement.ApprovedOrders
-import com.mad.mad_encounters.ordermangement.RejectedOrders
+import com.mad.mad_encounters.ordermangement.activities.ApprovedOrders
 import com.mad.mad_encounters.ordermangement.model.OrderStatus
 
 class ApprovedOrderAdapter (private val approvedList: ArrayList<OrderStatus>) : RecyclerView.Adapter<ApprovedOrderAdapter.ApprovedOrderViewHolder>() {
