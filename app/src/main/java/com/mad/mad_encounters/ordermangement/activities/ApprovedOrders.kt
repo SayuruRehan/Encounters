@@ -1,4 +1,4 @@
-package com.mad.mad_encounters.ordermangement
+package com.mad.mad_encounters.ordermangement.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

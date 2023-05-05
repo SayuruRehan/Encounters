@@ -1,4 +1,4 @@
-package com.mad.mad_encounters.ordermangement
+package com.mad.mad_encounters.ordermangement.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.mad.mad_encounters.R
-import com.mad.mad_encounters.ordermangement.adapter.ApprovedOrderAdapter
 import com.mad.mad_encounters.ordermangement.adapter.RejectedOrderAdapter
 import com.mad.mad_encounters.ordermangement.model.OrderStatus
 
