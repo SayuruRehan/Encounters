@@ -44,15 +44,11 @@
         <activity
             android:name=".AddInventory"
             android:exported="false" />
-        <activity
-            android:name=".ViewOrder"
-            android:exported="false" />
+
         <activity
             android:name=".UserProfile"
             android:exported="false" />
-        <activity
-            android:name=".UpdateOrder"
-            android:exported="false" />
+
         <activity
             android:name=".Signup"
             android:exported="false" />
@@ -65,12 +61,42 @@
         <activity
             android:name=".Home"
             android:exported="false" />
+
+        <!--        User Management-->
         <activity
-            android:name=".DeleteOrder"
-            android:exported="false" />
+            android:name=".usermanagement.activity.AddOrder"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
-            android:name=".AddOrder"
-            android:exported="false" />
+            android:name=".usermanagement.activity.ViewOrder"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".usermanagement.activity.UpdateOrder"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".usermanagement.activity.DeleteOrder"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--        end of user management-->
+
         <activity
             android:name=".deliverymangement.activity.DeleteDeliveryActivity"
             android:exported="false" />
@@ -86,11 +112,11 @@
         <activity
             android:name=".deliverymangement.activity.DeliveryDashboardActivity"
             android:exported="false" >
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".FirstpageActivity"
@@ -102,12 +128,12 @@
             android:name=".ordermangement.activities.OrderManagementMain"
             android:exported="true" >
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ordermangement.activities.ApprovedOrders"

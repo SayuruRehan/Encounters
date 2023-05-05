@@ -4,23 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddOrder">
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="272dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="@color/dark_blue"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:shadowRadius="50"
-        android:text="SUBMIT ORDER"
-        android:textColor="#FEFEFE"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+    tools:context=".usermanagement.activity.AddOrder">
 
     <TextView
         android:id="@+id/textView10"
@@ -65,7 +49,7 @@
         app:srcCompat="@drawable/baseline_menu_24" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/tv_productname"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="30dp"
@@ -81,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/tv_contactNumber"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -94,10 +78,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_productname" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/tv_delDate"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
@@ -110,10 +94,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNumber" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/tv_destAddress"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="80dp"
@@ -127,10 +111,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNumber" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/tv_country"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="148dp"
@@ -144,10 +128,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNumber" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/tv_postalCode"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="216dp"
@@ -161,10 +145,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNumber" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/tv_quantity"
         android:layout_width="340dp"
         android:layout_height="51dp"
         android:layout_marginTop="280dp"
@@ -178,6 +162,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contactNumber" />
+
+    <Button
+        android:id="@+id/btn_addOrder"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/dark_blue"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowRadius="50"
+        android:text="SUBMIT ORDER"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quantity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
