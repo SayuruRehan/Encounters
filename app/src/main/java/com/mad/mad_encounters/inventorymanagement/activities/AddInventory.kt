@@ -40,7 +40,7 @@ class AddInventory : AppCompatActivity() {
         val cusId = etCusId.text.toString().trim()
         val cusName = etCusName.text.toString().trim()
         val item = etItem.text.toString().trim()
-        val quantity = etQuantity.toString().trim()
+        val quantity = etQuantity.text.toString().trim()
         val cusCountry = etCusCountry.text.toString().trim()
 
         if (cusId.isEmpty()) {
