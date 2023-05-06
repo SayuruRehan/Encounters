@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
@@ -11,12 +12,18 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.mad.mad_encounters.R
+import com.mad.mad_encounters.deliverymangement.activity.DeliveryDashboardActivity
 
 class OrderManagementMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order_management_main)
 
+        val menuIcon = findViewById<ImageView>(R.id.menu)
+        menuIcon.setOnClickListener {
+            val intent = Intent(this, DeliveryDashboardActivity::class.java)
+            startActivity(intent)
+        }
         val dbRefApproved = FirebaseDatabase.getInstance().getReference("ApprovedOrders")
         dbRefApproved.keepSynced(true)
 

@@ -65,7 +65,7 @@
         <!--        User Management-->
         <activity
             android:name=".usermanagement.activity.AddOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -73,7 +73,7 @@
         </activity>
         <activity
             android:name=".usermanagement.activity.ViewOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -81,7 +81,7 @@
         </activity>
         <activity
             android:name=".usermanagement.activity.UpdateOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -127,10 +127,10 @@
             android:name=".ordermangement.activities.OrderManagementMain"
             android:exported="true" >
 
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ordermangement.activities.ApprovedOrders"
