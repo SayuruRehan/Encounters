@@ -30,19 +30,24 @@
             android:name=".ordermangement.activities.RejectForm"
             android:exported="false" />
         <activity
-            android:name=".ViewInventory"
+            android:name=".inventorymanagement.activities.ViewInventory"
             android:exported="false" />
         <activity
-            android:name=".UpdateInventory"
+            android:name=".inventorymanagement.activities.UpdateInventory"
             android:exported="false" />
         <activity
-            android:name=".InventoryMain"
+            android:name=".inventorymanagement.activities.InventoryMain"
+            android:exported="true">
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
+        </activity>
+        <activity
+            android:name=".inventorymanagement.activities.DeleteInventory"
             android:exported="false" />
         <activity
-            android:name=".DeleteInventory"
-            android:exported="false" />
-        <activity
-            android:name=".AddInventory"
+            android:name=".inventorymanagement.activities.AddInventory"
             android:exported="false" />
 
         <activity
@@ -65,7 +70,7 @@
         <!--        User Management-->
         <activity
             android:name=".usermanagement.activity.AddOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -73,7 +78,7 @@
         </activity>
         <activity
             android:name=".usermanagement.activity.ViewOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -81,7 +86,7 @@
         </activity>
         <activity
             android:name=".usermanagement.activity.UpdateOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
@@ -89,7 +94,7 @@
         </activity>
         <activity
             android:name=".usermanagement.activity.DeleteOrder"
-            android:exported="true" >
+            android:exported="false" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->

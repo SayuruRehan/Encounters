@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7AFFFFFF"
-    tools:context=".AddInventory">
+    tools:context=".inventorymanagement.activities.AddInventory">
 
     <TextView
         android:id="@+id/textView10"
@@ -46,6 +46,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cusId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/customer_id" />
@@ -60,6 +61,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cusName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/customer_name" />
@@ -76,6 +78,7 @@
         tools:layout_editor_absoluteY="344dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/item" />
@@ -92,6 +95,7 @@
         tools:layout_editor_absoluteY="420dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/quantity" />
@@ -108,13 +112,14 @@
         tools:layout_editor_absoluteY="479dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cusCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/country" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/submitBtn"
         android:layout_width="328dp"
         android:layout_height="112dp"
         android:text="@string/submit"

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InventoryMain">
+    tools:context=".inventorymanagement.activities.InventoryMain">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/viewAllItemBtn"
         android:layout_width="167dp"
         android:layout_height="93dp"
         android:layout_marginStart="24dp"
@@ -15,10 +15,10 @@
         android:backgroundTint="@color/lblue"
         android:text="@string/view_all_items"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/addNewItemBtn" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addNewItemBtn"
         android:layout_width="167dp"
         android:layout_height="93dp"
         android:layout_marginTop="@dimen/addValueMarginTop"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/updateItemBtn"
         android:layout_width="167dp"
         android:layout_height="93dp"
         android:layout_marginTop="52dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/deleteItemBtn"
         android:layout_width="167dp"
         android:layout_height="93dp"
         android:layout_marginTop="48dp"
@@ -49,7 +49,7 @@
         android:text="@string/delete_item"
         android:backgroundTint="@color/lblue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/updateItemBtn" />
 
     <ImageView
         android:id="@+id/logo"
