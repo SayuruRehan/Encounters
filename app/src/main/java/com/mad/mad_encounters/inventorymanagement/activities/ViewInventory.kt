@@ -35,8 +35,7 @@ class ViewInventory : AppCompatActivity() {
         appRecyclerView.visibility = View.GONE
         dbRef = FirebaseDatabase.getInstance().getReference("InventoryItems")
         dbRef.addValueEventListener(object : ValueEventListener {
-//            @SuppressLint("SuspiciousIndentation")
-
+            @SuppressLint("SuspiciousIndentation")
             override fun onDataChange(snapshot: DataSnapshot) {
                 viewItems.clear()
                 if (snapshot.exists()) {
@@ -57,7 +56,6 @@ class ViewInventory : AppCompatActivity() {
                                 intent.putExtra("InvItem", viewItems[position].item)
                                 startActivity(intent)
                             }
-
                         })
 
                     appRecyclerView.adapter = ViewAdapter(viewItems)
