@@ -44,11 +44,11 @@ class ViewInventory : AppCompatActivity() {
                         viewItems.add(inventoryItem!!)
                     }
                     val iAdapter = ViewAdapter(viewItems)
-                    appRecyclerView.adapter = iAdapter
+                        appRecyclerView.adapter = iAdapter
 
-                        iAdapter.setOnITemClickListener(object : ViewAdapter.onItemClickListener{
-                            override fun onItemClick(position: Int) {
-                                val intent = Intent(this@ViewInventory, InventryDetailsActivity::class.java)
+                            iAdapter.setOnItemClickListener(object : ViewAdapter.onItemClickListener{
+                                override fun onItemClick(position: Int) {
+                                    val intent = Intent(this@ViewInventory, InventryDetailsActivity::class.java)
 
                                 intent.putExtra("InvId", viewItems[position].cusId)
                                 intent.putExtra("InvName", viewItems[position].cusName)
@@ -57,6 +57,12 @@ class ViewInventory : AppCompatActivity() {
                                 startActivity(intent)
                             }
                         })
+//                                    intent.putExtra("InvId", viewItems[position].cusId)
+//                                    intent.putExtra("InvName", viewItems[position].cusName)
+//                                    intent.putExtra("InvCon", viewItems[position].cusCountry)
+//                                    intent.putExtra("InvItem", viewItems[position].item)
+//                                    startActivity(intent)
+
 
                     appRecyclerView.adapter = ViewAdapter(viewItems)
                     appRecyclerView.visibility = View.VISIBLE
