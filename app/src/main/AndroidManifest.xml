@@ -48,7 +48,7 @@
             android:name=".inventorymanagement.activities.AddInventory"
             android:exported="false" />
         <activity
-            android:name=".UserProfile"
+            android:name=".usermanagement.activity.UserProfile"
             android:exported="false" />
         <activity
             android:name=".Signup"
@@ -60,8 +60,14 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".Home"
-            android:exported="false" /> <!-- User Management -->
+            android:name=".usermanagement.activity.Home"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- User Management -->
         <activity
             android:name=".usermanagement.activity.AddOrder"
             android:exported="false">
@@ -129,10 +135,10 @@
             android:name=".ordermangement.activities.OrderManagementMain"
             android:exported="true">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+<!--             <intent-filter>-->
+<!--             <action android:name="android.intent.action.MAIN" />-->
+<!--             <category android:name="android.intent.category.LAUNCHER" />-->
+<!--             </intent-filter>-->
         </activity>
         <activity
             android:name=".ordermangement.activities.ApprovedOrders"
