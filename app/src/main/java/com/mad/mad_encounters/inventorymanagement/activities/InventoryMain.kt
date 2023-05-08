@@ -17,18 +17,6 @@ class InventoryMain : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val updateItemBtn = findViewById<Button>(R.id.updateItemBtn)
-        updateItemBtn.setOnClickListener{
-            val intent = Intent(this, UpdateInventory::class.java)
-            startActivity(intent)
-        }
-
-        val deleteItemBtn = findViewById<Button>(R.id.deleteItemBtn)
-        deleteItemBtn.setOnClickListener{
-            val intent = Intent(this, DeleteInventory::class.java)
-            startActivity(intent)
-        }
-
         val viewAllItemBtn = findViewById<Button>(R.id.viewAllItemBtn)
         viewAllItemBtn.setOnClickListener{
             val intent = Intent(this, ViewInventory::class.java)
