@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.mad.mad_encounters.R
 
-class InventryDetailsActivity : AppCompatActivity() {
+class InventoryDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvEmpId: TextView
     private lateinit var tvEmpName: TextView

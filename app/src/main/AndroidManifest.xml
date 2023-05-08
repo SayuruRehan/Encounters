@@ -12,7 +12,7 @@
         android:theme="@style/Theme.MAD_Encounters"
         tools:targetApi="31">
         <activity
-            android:name=".InventryDetailsActivity"
+            android:name=".inventorymanagement.activities.InventoryDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".ApprovedDeliveryItemActivity"
