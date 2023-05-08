@@ -37,20 +37,26 @@ class ViewOrder : AppCompatActivity() {
         orderRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Order")
+        dbRef = FirebaseDatabase.getInstance().getReference("Orders")
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 orderList.clear()
                 if (snapshot.exists()) {
-                    for (orderSnapshot in snapshot.children) {
-                        val order = orderSnapshot.getValue(OrderModel::class.java)
-                        orderList.add(order!!)
+                    for (orderSnap in snapshot. children) {
+                        val orderData = orderSnap.getValue(OrderModel::class.java)
+                        orderList.add(orderData!!)
                     }
                     val oAdapter = OrderAdapter(orderList)
                     orderRecyclerView.adapter = oAdapter
 
                     oAdapter.setOnItemClickListener(object : OrderAdapter.onItemClickListener {
                         override fun onItemClick(position: Int) {
+                            val intent = Intent(this@ViewOrder, ViewOrder::class.java)
+
+                            intent.putExtra("orderID", orderList[position].orderID)
+                            intent.putExtra("proName", orderList[position].ProductName)
+                            intent.putExtra("destAddress", orderList[position].DestAddress)
+                            startActivity(intent)
                         }
                     })
 
