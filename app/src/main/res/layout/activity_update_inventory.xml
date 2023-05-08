@@ -6,91 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".inventorymanagement.activities.UpdateInventory">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="415dp"
-        android:layout_height="58dp"
-        android:background="@color/lblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="62dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
-        app:srcCompat="@drawable/baseline_arrow_back_24" />
+        <EditText
+            android:id="@+id/etEmpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Name"
+            android:inputType="textPersonName" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="41dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
-        app:srcCompat="@drawable/baseline_menu_24" />
+        <EditText
+            android:id="@+id/etEmpAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Country" />
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="366dp"
-        android:layout_height="96dp"
-        android:layout_marginTop="164dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        android:backgroundTint="@color/lblue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/etEmpSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Item"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="@dimen/marginTopButton"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="#001"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btnUpdateData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Update Data" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="@dimen/itemMarginTop"
-        android:text="Dryfish"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="348dp"
-        android:layout_marginTop="@dimen/quantityMarginTop"
-        android:text="10kg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="@dimen/ButtonUpdate"
-        android:backgroundTint="@color/white"
-        android:text="Update"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
