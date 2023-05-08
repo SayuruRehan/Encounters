@@ -5,13 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.mad.mad_encounters.Home
 import com.mad.mad_encounters.R
-import com.mad.mad_encounters.deliverymangement.activity.DeleteDeliveryActivity
 import com.mad.mad_encounters.usermanagement.adapter.OrderAdapter
 import com.mad.mad_encounters.usermanagement.model.OrderModel
 
