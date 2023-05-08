@@ -10,7 +10,6 @@ class DeliveryDashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.delivery_dashboard)
-
     }
     fun navigateToAdd(view: View) {
         val intent = Intent(this, AddDeliveryActivity::class.java)
