@@ -3,10 +3,7 @@ package com.mad.mad_encounters.inventorymanagement.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.FirebaseDatabase
 import com.mad.mad_encounters.R
@@ -14,10 +11,12 @@ import com.mad.mad_encounters.inventorymanagement.model.InventoryItem
 
 class InventoryDetailsActivity : AppCompatActivity() {
 
-    private lateinit var tvEmpId: TextView
-    private lateinit var tvEmpName: TextView
-    private lateinit var tvEmpAge: TextView
-    private lateinit var tvEmpSalary: TextView
+
+    private lateinit var tvCusId: TextView
+    private lateinit var tvCusName: TextView
+    private lateinit var tvItem: TextView
+    private lateinit var tvQuantity: TextView
+    private lateinit var tvCusCountry: TextView
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
 
@@ -30,79 +29,92 @@ class InventoryDetailsActivity : AppCompatActivity() {
 
         btnUpdate.setOnClickListener {
             openUpdateDialog(
-                intent.getStringExtra("InvId").toString(),
-                intent.getStringExtra("InvName").toString()
+                intent.getStringExtra("cusId").toString(),
             )
         }
 
         btnDelete.setOnClickListener {
             deleteRecord(
-                intent.getStringExtra("InvId").toString()
+                intent.getStringExtra("cusId").toString()
             )
+        }
+
+        val backButton = findViewById<ImageView>(R.id.backBtn)
+        backButton.setOnClickListener {
+            finish()
         }
     }
 
 
 
     private fun initView() {
-        tvEmpId = findViewById(R.id.tvEmpId)
-        tvEmpName = findViewById(R.id.tvEmpName)
-        tvEmpAge = findViewById(R.id.tvEmpAge)
-        tvEmpSalary = findViewById(R.id.tvEmpSalary)
+        tvCusId = findViewById(R.id.cusId)
+        tvCusName = findViewById(R.id.cusName)
+        tvItem = findViewById(R.id.item)
+        tvQuantity = findViewById(R.id.quantity)
+        tvCusCountry = findViewById(R.id.cusCountry)
+
 
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
     }
 
     private fun setValuesToViews() {
-        tvEmpId.text = intent.getStringExtra("InvId")
-        tvEmpName.text = intent.getStringExtra("InvName")
-        tvEmpAge.text = intent.getStringExtra("InvCon")
-        tvEmpSalary.text = intent.getStringExtra("InvItem")
+        tvCusId.text = intent.getStringExtra("cusId")
+        tvCusName.text = intent.getStringExtra("cusName")
+        tvItem.text = intent.getStringExtra("item")
+        tvQuantity.text = intent.getStringExtra("quantity")
+        tvCusCountry.text = intent.getStringExtra("cusCountry")
+
     }
 
-    private fun openUpdateDialog(InvId:String,InvName:String){
+    private fun openUpdateDialog(cusId:String){
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
         val mDialogView = inflater.inflate(R.layout.activity_update_inventory, null)
 
         mDialog.setView(mDialogView)
 
-        val etEmpName = mDialogView.findViewById<EditText>(R.id.etEmpName)
-        val etEmpAge = mDialogView.findViewById<EditText>(R.id.etEmpAge)
-        val etEmpSalary = mDialogView.findViewById<EditText>(R.id.etEmpSalary)
+        val etCusName = mDialogView.findViewById<EditText>(R.id.etCusName)
+        val etCusCountry = mDialogView.findViewById<EditText>(R.id.etCusCountry)
+        val etItem = mDialogView.findViewById<EditText>(R.id.etItem)
+        val etQuantity = mDialogView.findViewById<EditText>(R.id.etQuantity)
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
-        etEmpName.setText(intent.getStringExtra("InvName").toString())
-        etEmpAge.setText(intent.getStringExtra("InvCon").toString())
-        etEmpSalary.setText(intent.getStringExtra("InvItem").toString())
+        etCusName.setText(intent.getStringExtra("cusName").toString())
+        etCusCountry.setText(intent.getStringExtra("cusCountry").toString())
+        etQuantity.setText(intent.getStringExtra("quantity").toString())
+        etItem.setText(intent.getStringExtra("item").toString())
 
-        mDialog.setTitle("Updating $InvName Record")
+        mDialog.setTitle("Updating $cusId Record")
 
         val alertDialog = mDialog.create()
         alertDialog.show()
 
         btnUpdateData.setOnClickListener{
             updateInvData(
-                InvId,
-                etEmpName.text.toString(),
-                etEmpAge.text.toString(),
-                etEmpSalary.text.toString()
+                cusId,
+                etCusName.text.toString(),
+                etItem.text.toString(),
+                etQuantity.text.toString(),
+                etCusCountry.text.toString(),
             )
             Toast.makeText(applicationContext, "Employee Data Updated", Toast.LENGTH_LONG).show()
 
-            tvEmpName.text = etEmpName.text.toString()
-            tvEmpAge.text = etEmpAge.text.toString()
-            tvEmpSalary.text = etEmpSalary.text.toString()
+//            tvCusId.text = etCusId.text.toString()
+            tvCusName.text = etCusName.text.toString()
+            tvCusCountry.text = etCusCountry.text.toString()
+            tvItem.text = etItem.text.toString()
+            tvQuantity.text = etQuantity.text.toString()
 
             alertDialog.dismiss()
         }
     }
-    private fun updateInvData(id: String, name: String, age: String, salary:String ){
+    private fun updateInvData(cusId: String, cusName: String, item:String, quantity: String, cusCountry: String,  ){
 
-        val dbRef = FirebaseDatabase.getInstance().getReference("InventoryItems").child(id)
-        val InvInfo = InventoryItem(id, name, age, salary)
-        dbRef.setValue(InvInfo)
+        val dbRef = FirebaseDatabase.getInstance().getReference("InventoryItems").child(cusId)
+        val itemDetails = InventoryItem(cusId, cusName,item, quantity, cusCountry )
+        dbRef.setValue(itemDetails)
 
     }
 

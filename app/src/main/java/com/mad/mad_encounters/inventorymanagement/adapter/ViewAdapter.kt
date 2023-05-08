@@ -28,6 +28,7 @@ class ViewAdapter(private val viewItems: ArrayList<InventoryItem>) :
         val currentItem = viewItems[position]
         holder.cusId.text = currentItem.cusId
         holder.item.text = currentItem.item
+        holder.quantity.text = currentItem.quantity.toString()
     }
 
     override fun getItemCount(): Int {
@@ -36,8 +37,9 @@ class ViewAdapter(private val viewItems: ArrayList<InventoryItem>) :
 
     class ViewHolder(itemView: View, clickListener: OnItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        val cusId = itemView.findViewById<TextView>(R.id.editTextTextPersonName6)
-        val item = itemView.findViewById<TextView>(R.id.textView2)
+        val cusId = itemView.findViewById<TextView>(R.id.cusIdList)
+        val item = itemView.findViewById<TextView>(R.id.itemList)
+        val quantity = itemView.findViewById<TextView>(R.id.tvQty)
 
         init {
             itemView.setOnClickListener{

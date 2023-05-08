@@ -8,65 +8,76 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
 
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="415dp"
-        android:layout_height="58dp"
-        android:background="@color/lblue"
+        android:id="@+id/actionBar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/actionBarHeight"
+        android:background="@drawable/tab"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="62dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
-        app:srcCompat="@drawable/baseline_arrow_back_24" />
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="@+id/actionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/back_arrow" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="41dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/actionBar"
+        app:layout_constraintEnd_toEndOf="@+id/actionBar"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@drawable/menu" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Update"
+        android:textSize="@dimen/sub_heading"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Delete"
+        android:textSize="@dimen/sub_heading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10"
-        app:srcCompat="@drawable/baseline_menu_24" />
-
-<Button
-    android:id="@+id/btnUpdate"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    android:text="Update"
-    app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/linearLayout" />
-
-<Button
-    android:id="@+id/btnDelete"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
-    android:text="Delete"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toEndOf="@+id/btnUpdate"
-    app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintTop_toBottomOf="@+id/actionBar">
 
 
         <LinearLayout
@@ -91,10 +102,11 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Cus id"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
+                    android:text="Customer ID"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -104,15 +116,15 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpId"
+                    android:id="@+id/cusId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -139,10 +151,11 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Cus Name"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
+                    android:text="Name"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -152,15 +165,15 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpName"
+                    android:id="@+id/cusName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -188,13 +201,13 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Cus country"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
+                    android:text="Destination"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -204,16 +217,16 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpAge"
+                    android:id="@+id/cusCountry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -242,10 +255,11 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
                     android:text="Item"
                     android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
@@ -255,22 +269,72 @@ tools:context=".inventorymanagement.activities.InventoryDetailsActivity">
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvEmpSalary"
+                    android:id="@+id/item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="@dimen/sub_heading" />
 
             </LinearLayout>
 
 
         </LinearLayout>
 
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sub_heading" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4">
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/black"
+
+                    android:textSize="@dimen/sub_heading" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 

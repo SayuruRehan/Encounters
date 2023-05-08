@@ -5,34 +5,44 @@
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="96dp"
-    android:layout_margin="@dimen/margin"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/margin"
+    android:layout_marginBottom="8dp"
     android:backgroundTint="@color/light_blue"
-    app:cardElevation="4dp">
+    app:cardElevation="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dp">
 
 
-        <EditText
-            android:id="@+id/editTextTextPersonName6"
+        <TextView
+            android:id="@+id/cusIdList"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:fontFamily="sans-serif-condensed"
             android:inputType="textPersonName"
-            android:text="#001"
+            android:text="CUS ID"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sub_heading"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/itemList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-condensed"
             android:text="Item"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sub_heading1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -40,7 +50,10 @@
             android:id="@+id/tvQty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qty"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Quantity"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sub_heading"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.982"

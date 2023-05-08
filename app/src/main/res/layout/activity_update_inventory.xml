@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".inventorymanagement.activities.UpdateInventory">
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/etEmpName"
+            android:id="@+id/etCusName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -21,21 +21,28 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/etEmpAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:hint="Country" />
-
-        <EditText
-            android:id="@+id/etEmpSalary"
+            android:id="@+id/etItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Item"
             android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etCusCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Country" />
 
         <Button
             android:id="@+id/btnUpdateData"

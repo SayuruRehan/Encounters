@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,10 @@ class ViewInventory : AppCompatActivity(), ViewAdapter.OnItemClickListener {
         viewItems = arrayListOf<InventoryItem>()
         getInventoryList()
 
+        val backButton = findViewById<ImageView>(R.id.backBtn)
+        backButton.setOnClickListener {
+            finish()
+        }
     }
 
     private fun getInventoryList(){
@@ -62,10 +67,13 @@ class ViewInventory : AppCompatActivity(), ViewAdapter.OnItemClickListener {
     override fun onItemClick(position: Int) {
         val intent = Intent(this@ViewInventory, InventoryDetailsActivity::class.java)
 
-        intent.putExtra("InvId", viewItems[position].cusId)
-        intent.putExtra("InvName", viewItems[position].cusName)
-        intent.putExtra("InvCon", viewItems[position].cusCountry)
-        intent.putExtra("InvItem", viewItems[position].item)
+        intent.putExtra("cusId", viewItems[position].cusId)
+        intent.putExtra("cusName", viewItems[position].cusName)
+        intent.putExtra("item", viewItems[position].item)
+        intent.putExtra("quantity", viewItems[position].quantity)
+        intent.putExtra("cusCountry", viewItems[position].cusCountry)
+
+
         startActivity(intent)
     }
 }

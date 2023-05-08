@@ -48,9 +48,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".inventorymanagement.activities.DeleteInventory"
-            android:exported="false" />
-        <activity
             android:name=".inventorymanagement.activities.AddInventory"
             android:exported="false" />
         <activity
