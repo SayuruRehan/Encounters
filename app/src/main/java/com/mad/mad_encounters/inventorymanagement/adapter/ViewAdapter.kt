@@ -1,3 +1,5 @@
+//IT21267222
+
 package com.mad.mad_encounters.inventorymanagement.adapter
 
 import android.view.LayoutInflater
