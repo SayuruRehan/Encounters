@@ -36,9 +36,6 @@
             android:name=".inventorymanagement.activities.ViewInventory"
             android:exported="false" />
         <activity
-            android:name=".inventorymanagement.activities.UpdateInventory"
-            android:exported="false" />
-        <activity
             android:name=".inventorymanagement.activities.InventoryMain"
             android:exported="true">
             <intent-filter>
