@@ -10,7 +10,7 @@
         android:id="@+id/btn_start"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:layout_marginTop="@dimen/btn_start_mgTop"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/light_blue"
         android:fontFamily="sans-serif-condensed-medium"
         android:shadowRadius="20"
@@ -19,7 +19,7 @@
         android:textSize="@dimen/btn_start_txtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_bgn" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -32,23 +32,23 @@
         app:srcCompat="@drawable/whatsapp_image_2023_03_14_at_08_49_00" />
 
     <TextView
-        android:id="@+id/tv_bgn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tv_bgn"
+        android:id="@+id/textView"
+        android:layout_width="311dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#023282"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-condensed"
         android:scrollbarSize="4sp"
         android:shadowColor="#D8D1D1"
-        android:text="@string/tv_bgn"
+        android:text="Share your products with the world!"
         android:textAlignment="center"
-        android:textColor="@color/dark_blue"
+        android:textColor="#023180"
         android:textColorHint="@color/purple_700"
-        android:textSize="@dimen/tv_bgn_txtSize"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:text="Join with us for better Online shopping" />
+        tools:text="Share your products with the world!" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
