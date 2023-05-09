@@ -20,6 +20,7 @@ class AddDeliveryActivity : AppCompatActivity() {
     private lateinit var btnAdd: Button
 
     private lateinit var dbRef: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_delivery)
@@ -32,9 +33,30 @@ class AddDeliveryActivity : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Deliveries")
 
         btnAdd.setOnClickListener{
-            saveDeliveryData()
+            if (isValidDeliveryData()) {
+                saveDeliveryData()
+            }
         }
+    }
 
+    private fun isValidDeliveryData(): Boolean {
+        val ProName = productName.text.toString()
+        val Address = address.text.toString()
+        val Date = date.text.toString()
+
+        if (ProName.isEmpty()){
+            productName.error = "Please enter product name"
+            return false
+        }
+        if (Address.isEmpty()){
+            address.error = "Please enter address"
+            return false
+        }
+        if (Date.isEmpty()){
+            date.error = "Please enter delivery date"
+            return false
+        }
+        return true
     }
 
     private fun saveDeliveryData() {
@@ -42,16 +64,6 @@ class AddDeliveryActivity : AppCompatActivity() {
         val ProName = productName.text.toString()
         val Address = address.text.toString()
         val Date = date.text.toString()
-
-        if (ProName.isEmpty()){
-            productName.error = "Pleas  enter product name"
-        }
-        if (Address.isEmpty()){
-            address.error = "Pleas  enter country"
-        }
-        if (Date.isEmpty()){
-            date.error = "Pleas  enter delivery date"
-        }
 
         val deliveryID = dbRef.push().key!!
 

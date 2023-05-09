@@ -35,7 +35,7 @@
     <string name="icon_back" />
     <string name="icon_menu" />
     <string name="tv_add_delivery">Add Delivery</string>
-    <string name="tv_product_name">Product Name</string>
+    <string name="tv_product_name">Order ID</string>
     <string name="tv_address">Address</string>
     <string name="tv_delivery_date">Delivery Date</string>
     <string name="tv_status">Status</string>
