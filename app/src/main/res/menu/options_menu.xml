@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_user_management"
+        android:title="User Management"
+        />
+    <item
+        android:id="@+id/menu_order_management"
+        android:title="Order Management"
+        />
+    <item
+        android:id="@+id/menu_delivery_management"
+        android:title="Delivery Management"
+        />
+    <item
+        android:id="@+id/menu_inventory_management"
+        android:title="Inventory Management"
+        />
+</menu>
