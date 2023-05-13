@@ -119,21 +119,21 @@
         <activity
             android:name=".deliverymangement.activity.DeliveryDashboardActivity"
             android:exported="true" >
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
+<!--                        <intent-filter>-->
+<!--                            <action android:name="android.intent.action.MAIN" />-->
+<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                        </intent-filter>-->
         </activity>
         <activity
             android:name=".FirstpageActivity"
             android:exported="false" />
         <activity
             android:name=".BeginingActivity"
-            android:exported="false">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ordermangement.activities.OrderManagementMain"
@@ -150,15 +150,14 @@
         <activity
             android:name=".ordermangement.activities.RejectedOrders"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true">-->
 <!--             <intent-filter>-->
 <!--             <action android:name="android.intent.action.MAIN" />-->
 <!--             <category android:name="android.intent.category.LAUNCHER" />-->
 <!--             </intent-filter>-->
-        </activity>
+<!--        </activity>-->
     </application>
 
 </manifest>
