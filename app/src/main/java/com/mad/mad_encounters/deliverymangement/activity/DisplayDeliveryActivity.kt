@@ -4,14 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.mad.mad_encounters.R
 import com.mad.mad_encounters.deliverymangement.model.DeliveryModel
+
 
 class DisplayDeliveryActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class DisplayDeliveryActivity : AppCompatActivity() {
     private lateinit var tv_display_product_name: TextView
     private lateinit var tv_display_address: TextView
     private lateinit var tv_display_delivery_date: TextView
+    private lateinit var sp_delivery_type: Spinner
     private lateinit var btn_update1: Button
     private lateinit var btn_delete1: Button
 
@@ -65,6 +67,14 @@ class DisplayDeliveryActivity : AppCompatActivity() {
         tv_display_product_name.text = intent.getStringExtra("proName")
         tv_display_address.text = intent.getStringExtra("address")
         tv_display_delivery_date.text = intent.getStringExtra("date")
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.delivery_types,
+            android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        sp_delivery_type.adapter = adapter
+        sp_delivery_type.setSelection(adapter.getPosition(intent.getStringExtra("type")))
     }
 
     private fun initView() {
@@ -72,6 +82,7 @@ class DisplayDeliveryActivity : AppCompatActivity() {
         tv_display_product_name = findViewById(R.id.tv_display_product_name)
         tv_display_address = findViewById(R.id.tv_display_address)
         tv_display_delivery_date = findViewById(R.id.tv_display_delivery_date)
+        sp_delivery_type = findViewById(R.id.sp_delivery_type)
 
         btn_update1 = findViewById(R.id.btn_update1)
         btn_delete1 = findViewById(R.id.btn_delete1)
@@ -87,13 +98,21 @@ class DisplayDeliveryActivity : AppCompatActivity() {
         val productUpdateName = dDialogView.findViewById<EditText>(R.id.tv_update_product_name)
         val Upaddress = dDialogView.findViewById<EditText>(R.id.tv_update_address)
         val Update = dDialogView.findViewById<EditText>(R.id.tv_update_delivery_date)
+        val spUpdateDeliveryType = dDialogView.findViewById<Spinner>(R.id.sp_update_delivery_type)
         val btnUpdateData = dDialogView.findViewById<Button>(R.id.btn_update)
 
         productUpdateName.setText(intent.getStringExtra("proName").toString())
         Upaddress.setText(intent.getStringExtra("address").toString())
         Update.setText(intent.getStringExtra("date").toString())
 
-//        dDialog.setTitle("Updating $proName Record")
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.delivery_types,
+            android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spUpdateDeliveryType.adapter = adapter
+        spUpdateDeliveryType.setSelection(adapter.getPosition(intent.getStringExtra("type")))
 
         val alertDialog = dDialog.create()
         alertDialog.show()
@@ -103,7 +122,8 @@ class DisplayDeliveryActivity : AppCompatActivity() {
                 delivertID,
                 productUpdateName.text.toString(),
                 Upaddress.text.toString(),
-                Update.text.toString()
+                Update.text.toString(),
+                spUpdateDeliveryType.selectedItem.toString()
             )
             Toast.makeText(applicationContext, "Delivery data Updated", Toast.LENGTH_LONG).show()
 
@@ -113,11 +133,18 @@ class DisplayDeliveryActivity : AppCompatActivity() {
 
             alertDialog.dismiss()
         }
+
     }
 
-    private fun updateDeliveryData(id:String, name:String, address:String, date:String){
+    private fun updateDeliveryData(
+        id: String,
+        name: String,
+        address: String,
+        date: String,
+        type: String
+    ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Deliveries").child(id)
-        val deliveryInfo = DeliveryModel(id, name, address, date)
+        val deliveryInfo = DeliveryModel(id, name, address, date, type)
         dbRef.setValue((deliveryInfo))
     }
 
@@ -125,4 +152,5 @@ class DisplayDeliveryActivity : AppCompatActivity() {
         val intent = Intent(this, AllDeliveryOrdersActivity::class.java)
         startActivity(intent)
     }
+
 }

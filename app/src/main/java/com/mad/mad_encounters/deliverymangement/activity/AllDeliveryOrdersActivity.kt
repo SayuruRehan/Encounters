@@ -60,6 +60,7 @@ class AllDeliveryOrdersActivity : AppCompatActivity() {
                             intent.putExtra("proName", deliveryList[position].ProName)
                             intent.putExtra("address", deliveryList[position].Address)
                             intent.putExtra("date", deliveryList[position].Date)
+                            intent.putExtra("type", deliveryList[position].DeliveryType)
                             startActivity(intent)
                         }
 

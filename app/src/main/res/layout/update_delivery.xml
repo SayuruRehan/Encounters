@@ -20,15 +20,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/sp_update_delivery_type" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/sp_update_delivery_type"
         android:layout_width="340dp"
         android:layout_height="27dp"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:entries="@array/delivery_types"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView

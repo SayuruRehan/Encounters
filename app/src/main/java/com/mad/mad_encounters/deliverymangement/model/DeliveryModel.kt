@@ -4,5 +4,6 @@ data class DeliveryModel (
     var delivertID: String? = null,
     var ProName: String? = null,
     var Address: String? = null,
-    var Date: String? = null
+    var Date: String? = null,
+    var DeliveryType: String? = null
 )
