@@ -87,7 +87,6 @@ class AddDeliveryActivity : AppCompatActivity() {
                 date.text.clear()
                 deliveryType.setSelection(0)
 
-
             }.addOnFailureListener { err ->
                 Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()
             }

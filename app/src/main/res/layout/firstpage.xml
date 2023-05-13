@@ -10,17 +10,17 @@
         android:id="@+id/btn_login"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:layout_marginTop="@dimen/btn_login_mgTop"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/light_blue"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="navigateuserpage"
         android:shadowRadius="20"
         android:text="@string/btn_login"
         android:textColor="#F9F9F9"
         android:textSize="@dimen/tv_bgn_txtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        android:onClick="navigateuserpage" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/tv_acc"
         android:textAlignment="center"
@@ -50,9 +50,10 @@
         android:id="@+id/btn_adminlg"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:layout_marginTop="@dimen/btn_adminlogin"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@color/white"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="navigateadminpage"
         android:shadowRadius="50"
         android:text="@string/btn_adminlg"
         android:textColor="#023282"
@@ -60,8 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_acc"
-        android:onClick="navigateadminpage" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_acc" />
 
     <TextView
         android:id="@+id/tv_signup"

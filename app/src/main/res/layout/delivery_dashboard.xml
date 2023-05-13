@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/optionsMenu"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:layout_marginTop="@dimen/Menu_Icon_mgnTop"
@@ -57,30 +57,30 @@
         android:id="@+id/btn_add_delivery"
         android:layout_width="330dp"
         android:layout_height="151dp"
-        android:layout_marginTop="@dimen/btn_daashboard_mgnTop"
+        android:layout_marginTop="30dp"
         android:background="@drawable/bg_round"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="navigateToAdd"
         android:text="@string/btn_add_delivery"
         android:textColor="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_approved"
-        android:onClick="navigateToAdd"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_approved" />
 
     <Button
         android:id="@+id/btn_all_delivery"
         android:layout_width="330dp"
         android:layout_height="151dp"
-        android:layout_marginTop="@dimen/btn_daashboard_mgnTop"
+        android:layout_marginTop="30dp"
         android:background="@drawable/bg_round"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="navigateToAll"
         android:text="@string/btn_all_delivery"
         android:textColor="#F9F9F9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_delivery"
-        android:onClick="navigateToAll"/>
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_delivery" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

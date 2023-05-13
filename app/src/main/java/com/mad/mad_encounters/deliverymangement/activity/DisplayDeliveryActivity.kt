@@ -142,6 +142,7 @@ class DisplayDeliveryActivity : AppCompatActivity() {
         address: String,
         date: String,
         type: String
+
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Deliveries").child(id)
         val deliveryInfo = DeliveryModel(id, name, address, date, type)
