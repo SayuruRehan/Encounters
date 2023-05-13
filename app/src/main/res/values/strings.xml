@@ -48,7 +48,6 @@
     <string name="tv_delivery_details">Delivery Details</string>
     <string name="select_delivery_type">Select delivery type</string>
     <string-array name="delivery_types">
-        <item></item>
         <item>Air</item>
         <item>Ship</item>
     </string-array>
