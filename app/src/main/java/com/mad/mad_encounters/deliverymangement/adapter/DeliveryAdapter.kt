@@ -31,6 +31,7 @@ class DeliveryAdapter (private val deliveryList: ArrayList<DeliveryModel>) : Rec
         holder.tvDeliveryName.text = currentDelivery.ProName
         holder.tvDeliveryAddress.text = currentDelivery.Address
         holder.tvDeliveryDate.text = currentDelivery.Date
+        holder.tvDeliveryType.text = currentDelivery.DeliveryType
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +42,7 @@ class DeliveryAdapter (private val deliveryList: ArrayList<DeliveryModel>) : Rec
         val tvDeliveryName : TextView = itemView.findViewById(R.id.tvDeliveryName)
         val tvDeliveryAddress : TextView = itemView.findViewById(R.id.tvDeliveryAddress)
         val tvDeliveryDate : TextView = itemView.findViewById(R.id.tvDeliveryDate)
+        val tvDeliveryType : TextView = itemView.findViewById(R.id.tvDeliveryType)
 
         init {
             itemView.setOnClickListener{

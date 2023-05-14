@@ -10,7 +10,7 @@
         android:id="@+id/btn_add"
         android:layout_width="273dp"
         android:layout_height="75dp"
-        android:layout_marginTop="@dimen/btn_start_mgTop"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/light_blue"
         android:fontFamily="sans-serif-condensed-medium"
         android:shadowRadius="50"
@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spn_status" />
+        app:layout_constraintTop_toBottomOf="@+id/sp_delivery_type" />
 
     <TextView
         android:id="@+id/tv_header"
@@ -125,10 +125,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_delivery_date" />
 
     <Spinner
-        android:id="@+id/spn_status"
+        android:id="@+id/sp_delivery_type"
         android:layout_width="340dp"
         android:layout_height="27dp"
-        android:layout_marginTop="10dp"
+        android:entries="@array/delivery_types"
+        android:prompt="@string/select_delivery_type"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_status" />

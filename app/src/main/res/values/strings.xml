@@ -38,7 +38,7 @@
     <string name="tv_product_name">Order ID</string>
     <string name="tv_address">Address</string>
     <string name="tv_delivery_date">Delivery Date</string>
-    <string name="tv_status">Status</string>
+    <string name="tv_status">Type</string>
     <string name="spn_status" />
     <string name="btn_add">Add</string>
     <string name="tv_update_delivery">Update Delivery</string>
@@ -46,6 +46,11 @@
     <string name="tv_delete_delivery">Delete Delivery</string>
     <string name="btn_delete">delete</string>
     <string name="tv_delivery_details">Delivery Details</string>
+    <string name="select_delivery_type">Select delivery type</string>
+    <string-array name="delivery_types">
+        <item>Air</item>
+        <item>Ship</item>
+    </string-array>
 
     <!--    user-->
     <string name="tv_begin">Share your products with the world!</string>

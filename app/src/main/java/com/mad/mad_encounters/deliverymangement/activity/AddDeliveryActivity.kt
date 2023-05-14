@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -17,6 +18,7 @@ class AddDeliveryActivity : AppCompatActivity() {
     private lateinit var productName: EditText
     private lateinit var address: EditText
     private lateinit var date: EditText
+    private lateinit var deliveryType: Spinner
     private lateinit var btnAdd: Button
 
     private lateinit var dbRef: DatabaseReference
@@ -28,6 +30,7 @@ class AddDeliveryActivity : AppCompatActivity() {
         productName = findViewById(R.id.tv_product_name)
         address = findViewById(R.id.tv_address)
         date = findViewById(R.id.tv_delivery_date)
+        deliveryType = findViewById(R.id.sp_delivery_type)
         btnAdd = findViewById(R.id.btn_add)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Deliveries")
@@ -43,6 +46,7 @@ class AddDeliveryActivity : AppCompatActivity() {
         val ProName = productName.text.toString()
         val Address = address.text.toString()
         val Date = date.text.toString()
+        val DeliveryType = deliveryType.selectedItem.toString()
 
         if (ProName.isEmpty()){
             productName.error = "Please enter product name"
@@ -56,6 +60,10 @@ class AddDeliveryActivity : AppCompatActivity() {
             date.error = "Please enter delivery date"
             return false
         }
+        if (DeliveryType == "Select delivery type"){
+            Toast.makeText(this, "Please select a delivery type", Toast.LENGTH_SHORT).show()
+            return false
+        }
         return true
     }
 
@@ -64,10 +72,11 @@ class AddDeliveryActivity : AppCompatActivity() {
         val ProName = productName.text.toString()
         val Address = address.text.toString()
         val Date = date.text.toString()
+        val DeliveryType = deliveryType.selectedItem.toString()
 
         val deliveryID = dbRef.push().key!!
 
-        val delivery = DeliveryModel(deliveryID, ProName, Address, Date)
+        val delivery = DeliveryModel(deliveryID, ProName, Address, Date, DeliveryType)
 
         dbRef.child(deliveryID).setValue(delivery)
             .addOnCompleteListener{
@@ -76,6 +85,7 @@ class AddDeliveryActivity : AppCompatActivity() {
                 productName.text.clear()
                 address.text.clear()
                 date.text.clear()
+                deliveryType.setSelection(0)
 
             }.addOnFailureListener { err ->
                 Toast.makeText(this,"Error ${err.message}", Toast.LENGTH_LONG).show()
